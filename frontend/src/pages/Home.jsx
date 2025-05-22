@@ -1,11 +1,11 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar/Navbar'
 import Services from '../components/Servicess/Services'
 import Features from '../components/Feature/Features'
 import Pricing from '../components/Price/Pricing'
 import Reviews from '../components/Review/Reviews'
-import Trial from '../components/Trial'
-import Footer from '../components/Footer'
+import Trial from '../components/Trial/Trial'
+import Footer from '../components/Footer/Footer'
 import Banner from '../components/Banner/Banner'
 
 const Home = () => {

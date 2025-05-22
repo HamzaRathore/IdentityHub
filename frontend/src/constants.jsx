@@ -8,27 +8,28 @@ import passcode from "./assets/banner/pass.svg";
 import password from "./assets/banner/password.svg";
 import user from "./assets/banner/user.svg";
 
+// Footer
+import facebook from "./assets/footer/facebook.svg";
+import instagram from "./assets/footer/instagram.svg";
+import telegram from "./assets/footer/telegram.svg";
+import twitter from "./assets/footer/twitter.svg";
 
+// Navbar
 export const navs = [
   { 
-    id: 1, 
-    name: "Services" 
+    id: 1, name: "Services" 
   },
   { 
-    id: 2, 
-    name: "Features" 
+    id: 2, name: "Features" 
   },
   { 
-    id: 3, 
-    name: "Pricing" 
+    id: 3, name: "Pricing" 
   },
   { 
-    id: 4, 
-    name: "Partners" 
+    id: 4, name: "Partners" 
   },
   { 
-    id: 5, 
-    name: "About Us" 
+    id: 5, name: "About Us" 
   },
 ];
 
@@ -116,39 +117,41 @@ export const security = [
 
 export const grid = [
   {
-    id: 1,
-    src: user,
-    title: "Username",
-    point: "+1 (456) 453-3456",
+    id: 1, src: user, title: "Username", point: "+1 (456) 453-3456",
   },
   {
-    id: 2,
-    src: number,
-    title: "Phone numbers",
-    point: "+1 (456) 453-3456",
+    id: 2, src: number, title: "Phone numbers", point: "+1 (456) 453-3456",
   },
   {
-    id: 3,
-    src: email,
-    title: "Email address",
-    point: "+1 (456) 453-3456",
+    id: 3, src: email, title: "Email address", point: "+1 (456) 453-3456",
   },
   {
-    id: 4,
-    src: credit,
-    title: "Credit card",
-    point: "+1 (456) 453-3456",
+    id: 4, src: credit, title: "Credit card", point: "+1 (456) 453-3456",
   },
   {
-    id: 5,
-    src: password,
-    title: "Password",
-    point: "Kas3345-r32",
+    id: 5, src: password, title: "Password", point: "Kas3345-r32",
   },
   {
-    id: 6,
-    src: passcode,
-    title: "One-time passcode",
-    point: "Kas3345-r32",
+    id: 6, src: passcode, title: "One-time passcode", point: "Kas3345-r32",
   },
 ];
+
+
+// Footer
+
+export const socialIcons = [
+    { 
+      src: twitter, alt: "twitter" 
+    },
+    { 
+      src: instagram, alt: "instagram" 
+    },
+    { 
+      src: telegram, alt: "telegram" 
+    },
+    { 
+      src: facebook, alt: "facebook" 
+    },
+  ];
+
+  export const footerLinks = ["FEATURES", "SERVICES", "PRICING", "HOW TO USE"];

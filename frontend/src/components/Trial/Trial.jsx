@@ -2,9 +2,10 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { motion } from "framer-motion";
-import circle from "../assets/circle.png";
-import bar from "../assets/bar.svg";
-import pattern from "../assets/pattern.png"
+import circle from "../../assets/circle.png";
+import bar from "../../assets/bar.svg";
+import pattern from "../../assets/pattern.png"
+import BackgroundImg from "../BackgroundImg";
 
 const Trial = () => {
   useEffect(() => {
@@ -21,17 +22,7 @@ const Trial = () => {
       data-aos-delay="200"
     >
       {/* background gradient img */}
-      <div
-        className="absolute overflow-visible inset-0 w-full h-[150%] bg-no-repeat bg-cover z-0"
-        style={{
-          backgroundImage: "url('/gradient.png')",
-          opacity: "0.3",
-          backgroundPosition: "center top -150px",
-          maskImage: "linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0))",
-          WebkitMaskImage:
-            "linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0))",
-        }}
-      />
+     <BackgroundImg/>
 
       {/*  circle img with rotation */}
       <div className="absolute inset-0 w-full h-full flex items-center justify-center z-0">

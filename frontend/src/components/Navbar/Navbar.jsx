@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import logo from "../assets/logo.svg";
-import { navs } from "../constants";
+import logo from "../../assets/logo.svg";
+import { navs } from "../../constants";
 import { FaBars } from "react-icons/fa";
 
 const Navbar = () => {
