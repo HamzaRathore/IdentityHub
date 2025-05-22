@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import BackgroundImg from "../BackgroundImg";
 import PriceCard from "./PriceCard";
 import { fetchPrice } from "../../apis/price";
+import GradientLabel from "../GradientLabel";
 
 const Pricing = () => {
 
@@ -74,11 +75,10 @@ const Pricing = () => {
           <img className="h-80 w-80" src={universe} alt="universe" />
         </motion.div>
         <div className="mx-auto flex flex-col items-center">
-          <div className="p-[1px] bg-gradient-to-br from-purple-600 to-blue-500 rounded-2xl w-32 shadow-sm shadow-purple-500/40">
-            <div className="bg-black rounded-2xl px-1 py-1 text-[12px] font-medium text-[#CAD1E9]">
-              Pricing
-            </div>
-          </div>
+
+          {/* Gradient label */}
+           <GradientLabel text ="Pricing"/>
+
           <div className="heading mt-2 text-[#CAD1E9] w-96 text-4xl">
             <h2>
               Our{" "}

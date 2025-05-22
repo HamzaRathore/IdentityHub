@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { fetchReview } from "../../apis/review";
 import ReviewCard from "./ReviewCard";
+import GradientLabel from "../GradientLabel";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
@@ -66,11 +67,10 @@ const Reviews = () => {
       <div className="relative w-[90%] sm:w-[88.5%] max-w-[88.5%] mx-auto text-center flex flex-col justify-center items-center">
         {/* header */}
         <div className="relative w-full sm:w-[33%] max-w-3xl mx-auto px-2 sm:px-4 text-center flex flex-col justify-center items-center">
-          <div className="p-[1px] bg-gradient-to-br from-purple-600 to-blue-500 rounded-2xl w-28 sm:w-32 shadow-sm shadow-purple-500/40">
-            <div className="bg-black rounded-2xl px-1 py-1 text-[10px] sm:text-[12px] font-medium text-[#CAD1E9]">
-              Testimonials
-            </div>
-          </div>
+         
+          {/* Gradient label */}
+           <GradientLabel text ="Testimonials"/>
+
           <div className="heading mt-2 text-[#CAD1E9] w-full sm:w-97 text-2xl sm:text-4xl">
             <h2>
               What our user{" "}

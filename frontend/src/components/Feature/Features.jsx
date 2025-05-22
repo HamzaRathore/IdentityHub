@@ -5,6 +5,7 @@ import BackgroundImg from "../BackgroundImg";
 import Section1 from "./Section1";
 import Section2 from "./Section2";
 import Section3 from "./Section3";
+import GradientLabel from "../GradientLabel";
 
 const Features = () => {
   useEffect(() => {
@@ -26,11 +27,10 @@ const Features = () => {
       {/* header */}
       <div className="relative w-[85.2%] z-20 max-w-[88.5%] mx-auto text-center flex flex-col justify-center items-center">
         <div className="relative w-full sm:w-[60%] md:w-[50%] lg:w-[33%] z-20 max-w-3xl mx-auto px-4 text-center flex flex-col justify-center items-center">
-          <div className="p-[1px] bg-gradient-to-br from-purple-600 to-blue-500 rounded-2xl w-32 shadow-sm shadow-purple-500/40">
-            <div className="bg-black rounded-2xl px-1 py-1 text-[12px] font-medium text-[#CAD1E9]">
-              Features
-            </div>
-          </div>
+           
+           {/* Gradient label */}
+           <GradientLabel text ="Features"/>
+
           <div className="heading mt-2 text-[#CAD1E9] w-full text-2xl sm:text-3xl md:text-4xl">
             <h2>
               Why{" "}

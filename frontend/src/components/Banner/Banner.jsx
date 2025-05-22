@@ -1,14 +1,12 @@
-import React from "react";
 import circle from "../../assets/circle.png";
 import bar from "../../assets/bar.svg";
 import BackgroundImg from "../BackgroundImg";
 import Productivity from "./Productivity";
 import PlanetsSection from "../PlanetsSection";
+import GradientLabel from "../GradientLabel";
 
 const Banner = () => {
-
   return (
-    
     <div className="relative w-full pt-36 md:pt-36 lg:pt-36 flex items-center justify-center bg-black overflow-visible">
       {/* Background img */}
       <BackgroundImg />
@@ -27,11 +25,9 @@ const Banner = () => {
 
       {/* Content container */}
       <div className="relative z-20 max-w-5xl mx-auto px-4 text-center flex flex-col justify-center items-center">
-        <div className="p-[1px] bg-gradient-to-br from-purple-600 to-blue-500 rounded-2xl w-36 shadow-sm shadow-purple-500/40">
-          <div className="bg-black rounded-2xl px-1 py-1 text-[12px] font-medium text-[#CAD1E9]">
-            Secure your data
-          </div>
-        </div>
+
+        {/* Gradient label */}
+        <GradientLabel text="Secure your data" />
 
         {/* Main heading with gradient */}
         <div className="relative text-center mb-6">
