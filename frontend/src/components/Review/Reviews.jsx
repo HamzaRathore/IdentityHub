@@ -1,0 +1,92 @@
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { fetchReview } from "../../apis/review";
+import ReviewCard from "./ReviewCard";
+
+const Reviews = () => {
+  const [reviews, setReviews] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const getReviews = async () => {
+      try {
+        const reviewData=await fetchReview();
+        setReviews(reviewData);
+        setLoading(false);
+      } catch (error) {
+        console.log("Error fetching reviews", error);
+        setLoading(false);
+      }
+    };
+
+    getReviews();
+  }, []);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
+  const goToPrevious = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? reviews.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === reviews.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  if (loading) {
+    return (
+      <div className="text-white text-center mt-20">Loading reviews...</div>
+    );
+  }
+
+  if (!reviews.length) {
+    return (
+      <div className="text-white text-center mt-20">No reviews available.</div>
+    );
+  }
+
+  const currentReview = reviews[currentIndex];
+
+  return (
+    <div
+      className="w-full flex flex-col items-center justify-center bg-transparent overflow-visible relative z-30 mt-20 md:mt-60 pb-20"
+      ata-aos="fade-up"
+      data-aos-delay="200"
+    >
+      <div className="relative w-[90%] sm:w-[88.5%] max-w-[88.5%] mx-auto text-center flex flex-col justify-center items-center">
+        {/* header */}
+        <div className="relative w-full sm:w-[33%] max-w-3xl mx-auto px-2 sm:px-4 text-center flex flex-col justify-center items-center">
+          <div className="p-[1px] bg-gradient-to-br from-purple-600 to-blue-500 rounded-2xl w-28 sm:w-32 shadow-sm shadow-purple-500/40">
+            <div className="bg-black rounded-2xl px-1 py-1 text-[10px] sm:text-[12px] font-medium text-[#CAD1E9]">
+              Testimonials
+            </div>
+          </div>
+          <div className="heading mt-2 text-[#CAD1E9] w-full sm:w-97 text-2xl sm:text-4xl">
+            <h2>
+              What our user{" "}
+              <span className="bg-gradient-to-r from-[#090EDB] to-[#8D1EA2] bg-clip-text text-transparent">
+                says
+              </span>{" "}
+              about us
+            </h2>
+          </div>
+        </div>
+
+        {/* Review card */}
+        <ReviewCard goToPrevious={goToPrevious} goToNext={goToNext} currentReview={currentReview} reviews={reviews} currentIndex={currentIndex} loading={loading}/>
+      </div>
+    </div>
+  );
+};
+
+export default Reviews;

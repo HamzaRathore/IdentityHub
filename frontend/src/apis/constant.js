@@ -7,4 +7,7 @@ export const USER_API = "http://localhost:3000/user/get";
 export const SERVICE_API = "http://localhost:3000/service/get";
 
 // Pricing api
-export const PRICING_API="http://localhost:3000/price/get"
+export const PRICING_API="http://localhost:3000/price/get";
+
+// Review api
+export const REVIEW_API="http://localhost:3000/review/get";
