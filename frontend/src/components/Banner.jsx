@@ -25,13 +25,13 @@ const floatAnim = {
 };
 
 const [user,setUser]=useState(null);
+const API_URL = "http://localhost:3000/user/get";
 
 useEffect(() => {
   
 const fetchuser=async()=>{
   try {
-    const res=await axios.get("http://localhost:3000/user/get");
-    // console.log(res);
+    const res=await axios.get(API_URL);
     setUser(res.data.user[0]);
   } catch (error) {
     console.log("error fetching user",error);
