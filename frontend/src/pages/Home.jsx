@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import Services from '../components/Services'
+import Services from '../components/Servicess/Services'
 import ChooseUs from '../components/Features'
 import Features from '../components/Features'
 import Pricing from '../components/Pricing'
