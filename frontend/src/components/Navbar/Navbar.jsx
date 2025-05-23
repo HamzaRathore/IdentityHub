@@ -3,10 +3,13 @@ import logo from "../../assets/logo.svg";
 import { FaBars } from "react-icons/fa";
 import NavbarDesktop from "./NavbarDesktop";
 import NavbarMobile from "./NavbarMobile";
+import { MdOutlineLightMode,MdOutlineDarkMode  } from "react-icons/md";
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [darkMode,setDarkMode]=useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,7 +43,14 @@ const Navbar = () => {
         <NavbarDesktop />
 
         {/* Desktop Button */}
-        <div className="hidden sm:flex items-center">
+        <div className="hidden sm:flex items-center" onClick={()=>setDarkMode(!darkMode)}>
+          {darkMode ?  <MdOutlineLightMode className="h-8 w-8 mr-4 hover:cursor-pointer" /> 
+          : 
+          <MdOutlineDarkMode  className="h-8 w-8 mr-4 hover:cursor-pointer" />  
+              
+          }
+         
+
           <button className="relative group overflow-hidden rounded-lg bg-gradient-to-r from-[#090EDB] to-[#8D1EA2] p-[1px] hover:cursor-pointer">
             <span className="relative block bg-gray-900 px-4 sm:px-5 py-1.5 sm:py-2 rounded-[calc(0.5rem-1px)] text-[#D9D9D9] text-xs sm:text-sm transition-all duration-300 group-hover:bg-opacity-50">
               Start Free Trial
