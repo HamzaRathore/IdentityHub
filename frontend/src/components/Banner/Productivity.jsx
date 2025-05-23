@@ -6,8 +6,12 @@ import email from "../../assets/banner/email.svg";
 import number from "../../assets/banner/number.svg";
 import passcode from "../../assets/banner/passcode.svg";
 import Productive from "../../assets/productivity.png";
+import { themeContext } from "./../../context/context";
+import { useContext } from "react";
 
 const Productivity = () => {
+  const { theme } = useContext(themeContext);
+
   const floatAnim = {
     initial: { y: 0 },
     animate: {
@@ -39,36 +43,55 @@ const Productivity = () => {
       {...floatAnim}
       className="relative w-full max-w-2xl mx-auto mb-8 flex flex-col items-center md:block gap-4"
     >
-      {/* Top left box */}
-      <div className="relative md:absolute md:top-2 md:left-2 sm:-top-4 sm:-left-4 w-44 rounded-lg border border-white/10 p-3 text-left bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/15 backdrop-blur-md">
+      <div
+        className={`
+    relative md:absolute md:top-2 md:left-2 sm:-top-4 sm:-left-4 w-44 rounded-lg p-3 text-left backdrop-blur-md
+    ${
+      theme === "dark"
+        ? "border border-white/10 bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/15 text-white"
+        : "border border-gray-300 bg-gray-100 text-gray-800 shadow-md"
+    }
+  `}
+      >
         <div className="flex items-center gap-2">
           <div className="w-8 h-6 rounded-full flex items-center justify-center">
             <span className="text-xs">
               <img src={passcode} alt="passcode" />
             </span>
           </div>
-          <div>
-            <p className="text-xs text-[#CAC6DD]">One-time passcode</p>
-            <p className="text-sm text-[#CAC6DD]">
-              {user ? user.passcode : "...Loading"}
-            </p>
+          <div
+            className={`${
+              theme === "dark" ? "text-[#CAC6DD]" : "text-gray-800"
+            }`}
+          >
+            <p className="text-xs ">One-time passcode</p>
+            <p className="text-sm ">{user ? user.passcode : "...Loading"}</p>
           </div>
         </div>
       </div>
 
       {/* Top Right box */}
-      <div className="relative md:absolute md:top-2 md:right-2 sm:-top-4 sm:-right-4 w-44 rounded-lg border border-white/10 p-3 text-left bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/15 backdrop-blur-md">
+      <div
+        className={`relative md:absolute md:top-2 md:right-2 sm:-top-4 sm:-right-4 w-44 rounded-lg border  p-3 text-left  backdrop-blur-md
+        ${
+          theme === "dark"
+            ? "border border-white/10 bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/15 text-white"
+            : "border border-gray-300 bg-gray-100 text-gray-800 shadow-md"
+        }`}
+      >
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-full flex items-center justify-center">
             <span className="text-[#CAC6DD]">
               <img src={number} alt="number" />
             </span>
           </div>
-          <div>
-            <p className="text-xs text-[#CAC6DD]">Phone numbers</p>
-            <p className="text-xs text-[#CAC6DD]">
-              {user ? user.number : "...Loading"}
-            </p>
+          <div
+            className={`${
+              theme === "dark" ? "text-[#CAC6DD]" : "text-gray-800"
+            }`}
+          >
+            <p className="text-xs ">Phone numbers</p>
+            <p className="text-xs ">{user ? user.number : "...Loading"}</p>
           </div>
         </div>
       </div>
@@ -83,35 +106,51 @@ const Productivity = () => {
       </div>
 
       {/* Bottom Left box */}
-      <div className="relative md:absolute md:bottom-2 md:left-2 sm:-bottom-4 sm:-left-4  w-44 rounded-lg border border-white/10 p-3 text-left bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/15 backdrop-blur-md">
+      <div
+        className={`relative md:absolute md:bottom-2 md:left-2 sm:-bottom-4 sm:-left-4  w-44 rounded-lg border  p-3 text-left  backdrop-blur-md   ${
+          theme === "dark"
+            ? "border border-white/10 bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/15 text-white"
+            : "border border-gray-300 bg-gray-100 text-gray-800 shadow-md"
+        }`}
+      >
         <div className="flex items-center gap-2">
           <div className="w-8 h-6 rounded-full flex items-center justify-center">
             <span className="text-xs">
               <img src={credit} alt="credit" />
             </span>
           </div>
-          <div>
-            <p className="text-xs text-[#CAC6DD]">Credit Card</p>
-            <p className="text-sm text-[#CAC6DD]">
-              {user ? user.card : "...Loading"}
-            </p>
+          <div
+            className={`${
+              theme === "dark" ? "text-[#CAC6DD]" : "text-gray-800"
+            }`}
+          >
+            <p className="text-xs">Credit Card</p>
+            <p className="text-sm">{user ? user.card : "...Loading"}</p>
           </div>
         </div>
       </div>
 
       {/* Bottom right box */}
-      <div className="relative md:absolute md:bottom-2 md:right-2 sm:-bottom-4 sm:-right-4  w-44 rounded-lg border border-white/10 p-3 text-left bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/15 backdrop-blur-md">
+      <div
+        className={`relative md:absolute md:bottom-2 md:right-2 sm:-bottom-4 sm:-right-4 w-44 rounded-lg border p-3 text-left backdrop-blur-md  ${
+          theme === "dark"
+            ? "border border-white/10 bg-gradient-to-br from-[#FFFFFF]/10 to-[#FFFFFF]/15 text-white"
+            : "border border-gray-300 bg-gray-100 text-gray-800 shadow-md"
+        }`}
+      >
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-full flex items-center justify-center">
             <span className="text-xs">
               <img src={email} alt="email" />
             </span>
           </div>
-          <div>
-            <p className="text-xs text-[#CAC6DD]">Email address</p>
-            <p className="text-sm text-[#CAC6DD]">
-              {user ? user.email : "...Loading"}
-            </p>
+          <div
+            className={`${
+              theme === "dark" ? "text-[#CAC6DD]" : "text-gray-800"
+            }`}
+          >
+            <p className="text-xs">Email address</p>
+            <p className="text-sm">{user ? user.email : "...Loading"}</p>
           </div>
         </div>
       </div>

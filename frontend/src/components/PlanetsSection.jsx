@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from "framer-motion";
-import planets from "../assets/planets.svg";
+import planets from "../assets/planets2.svg";
 const PlanetsSection = () => {
 
     const floatAnim = {

@@ -4,24 +4,32 @@ import BackgroundImg from "../BackgroundImg";
 import Productivity from "./Productivity";
 import PlanetsSection from "../PlanetsSection";
 import GradientLabel from "../GradientLabel";
+import { themeContext } from './../../context/context';
+import { useContext } from "react";
 
 const Banner = () => {
-  return (
-    <div className="relative w-full pt-36 md:pt-36 lg:pt-36 flex items-center justify-center bg-black overflow-visible">
-      {/* Background img */}
-      <BackgroundImg />
 
+  const {theme}=useContext(themeContext);
+
+  return (
+    <div className={`relative w-full pt-36 md:pt-36 lg:pt-36 flex items-center justify-center  overflow-visible ${theme === 'dark'? 'bg-black' : 'bg-[#FFFDF6]'}`}>
+      {/* Background img */}
+      {theme ==='dark'? <BackgroundImg />:""}
+      
       {/* Circle Image */}
       <div className="absolute inset-0 w-full h-full flex items-center justify-center z-0">
         <img
           src={circle}
           alt="Circle background"
-          className="opacity-90 h-[100%] md:h-[150%] w-[100%] pr-8 md:pt-40"
+          className={`
+          opacity-90 h-[100%] md:h-[150%] w-[100%] pr-8 md:pt-40
+          ${theme === "light" ? "filter invert" : ""}
+        `}
         />
       </div>
 
       {/* Planets img */}
-      <PlanetsSection />
+       <PlanetsSection/>
 
       {/* Content container */}
       <div className="relative z-20 max-w-5xl mx-auto px-4 text-center flex flex-col justify-center items-center">
@@ -78,15 +86,15 @@ const Banner = () => {
         </div>
 
         {/* Description */}
-        <p className="subheading text-white/80 max-w-2xl mx-auto mb-8 text-sm md:text-xl lg:text-xl">
+        <p className={`subheading max-w-2xl mx-auto mb-8 text-sm md:text-xl lg:text-xl ${theme === 'dark' ? 'text-[#CAC6DD]' : 'text-gray-600'}`}>
           Make your data invisible by generating unlimited identities. The
           next-level in privacy protection for online and travel.
         </p>
 
         {/* Buttons */}
         <div className="flex flex-row  gap-4 justify-center mb-16">
-          <button className="w-36 h-10 relative group overflow-hidden rounded-xl bg-gradient-to-r from-[#090EDB] to-[#8D1EA2] p-[1px] hover:cursor-pointer">
-            <span className="relative block bg-gray-900 px-4 py-2 rounded-xl text-[#D9D9D9] text-sm transition-all duration-300 group-hover:bg-opacity-50">
+          <button className="w-36 h-10 relative group overflow-hidden rounded-xl bg-gradient-to-r from-[#090EDB] to-[#8D1EA2] px-0.5 hover:cursor-pointer">
+            <span className={`relative block  px-2 py-2 rounded-xl text-[#D9D9D9] text-sm transition-all duration-300 group-hover:bg-opacity-50  ${theme ==='dark'?"bg-gray-900":"bg-white text-black text-lg"}`}>
               Start Free Trial
             </span>
           </button>

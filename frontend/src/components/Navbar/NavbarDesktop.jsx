@@ -1,7 +1,9 @@
 import React from "react";
 import { navs } from "../../constants";
-
+import { themeContext } from "../../context/context";
 const NavbarDesktop = () => {
+
+  
   return (
     <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-4 lg:space-x-8">
       {navs.map((item) => (
