@@ -1,10 +1,21 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 import { socialIcons, footerLinks } from "../../constants";
+import { useContext } from "react";
+import { themeContext } from "../../context/context";
+
 const Footer = () => {
+  const { theme } = useContext(themeContext);
+
   return (
     <div>
-      <footer className="w-full -mt-60 md:-mt-0 lg:-mt-0 py-6 px-8">
+      <footer
+        className={`w-full -mt-60 md:-mt-0 lg:-mt-0 py-6 px-8 ${
+          theme === "dark"
+            ? "bg-black"
+            : "bg-gradient-to-r from-[#2225d8] to-[#ac2ec5]"
+        }`}
+      >
         <div className="flex flex-col md:flex-row justify-between items-center pb-4">
           <div className="flex items-center mb-4 md:mb-0">
             <img src={logo} alt="IdentityHub Logo" className="mr-2" />

@@ -41,6 +41,14 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Toggle */}
+        <div className=" md:hidden pl-32 " >
+          {theme === "dark" ? (
+            <MdOutlineLightMode onClick={toggle} className="h-6 w-6  hover:cursor-pointer hover:scale-105 transition-all duration-150 text-white" />
+          ) : (
+            <MdOutlineDarkMode onClick={toggle} className="h-6 w-6  hover:cursor-pointer text-black hover:scale-105 transition-all duration-150" />
+          )}
+          </div>
+
         <button
           className="md:hidden text-[#D9D9D9] p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -68,7 +76,7 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Navigation */}
-      <NavbarMobile isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+      <NavbarMobile isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} toggle={toggle} />
     </>
   );
 };

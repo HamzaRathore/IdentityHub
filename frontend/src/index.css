@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
-
+:root{
+  background-color: white;
+}
+.body{
+  background-color: white;
+}
 
 .gradient-text {
   background: linear-gradient(to right, #f33cc0, #4349ff);
@@ -52,7 +57,6 @@
 .sub{
   font-family: 'Sora', sans-serif;
   font-weight: 400;
-  color:#CAC6DD;
   line-height: 32px;
 }
 .inter{

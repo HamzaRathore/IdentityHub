@@ -16,7 +16,7 @@ const Section3 = () => {
         className={`absolute inset-0 -z-10 rounded-2xl backdrop-blur-[16px] ${
           theme === "dark"
             ? "bg-gradient-to-br from-[#ffffff1a] to-[#ffffff0a] border border-white/10 shadow-xl"
-            : "bg-gradient-to-br from-[#f9f9f9] to-[#f0f0f0] border border-gray-300 shadow-xl"
+            : "bg-white border border-gray-300 shadow-xl"
         }`}
       ></div>
 

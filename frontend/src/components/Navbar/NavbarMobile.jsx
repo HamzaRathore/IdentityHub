@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { navs } from "../../constants";
+import { themeContext } from "../../context/context";
+import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
 
-const NavbarMobile = ({ isMenuOpen, setIsMenuOpen }) => {
+const NavbarMobile = ({ isMenuOpen, setIsMenuOpen,toggle }) => {
+
+  const {theme}=useContext(themeContext)
   if (!isMenuOpen) return null;
 
   return (
@@ -17,12 +21,14 @@ const NavbarMobile = ({ isMenuOpen, setIsMenuOpen }) => {
             {item.name}
           </a>
         ))}
+        
         <button className="w-full mt-2 relative group overflow-hidden rounded-lg bg-gradient-to-r from-[#090EDB] to-[#8D1EA2] p-[1px]">
           <span className="relative block bg-gray-900 w-full py-2 rounded-[calc(0.5rem-1px)] text-[#D9D9D9] text-sm transition-all duration-300 group-hover:bg-opacity-50">
             Start Free Trial
           </span>
         </button>
       </div>
+      
     </div>
   );
 };

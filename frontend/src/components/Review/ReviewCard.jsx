@@ -18,7 +18,7 @@ const ReviewCard = ({
         onClick={goToPrevious}
         className="p-2 sm:p-3 rounded-full bg-gradient-to-r from-[#090EDB] to-[#E73DC4] absolute -left-5 md:-left-5 top-[50%] transform -translate-y-1/2 hover:cursor-pointer"
       >
-        <FaAngleLeft />
+        <FaAngleLeft className={`${theme==='dark'?'text-black':'text-white'}`} />
       </button>
 
       {/* Next button */}
@@ -26,7 +26,7 @@ const ReviewCard = ({
         onClick={goToNext}
         className="p-2 sm:p-3 rounded-full bg-gradient-to-r from-[#090EDB] to-[#E73DC4] absolute -right-5 top-[50%] transform -translate-y-1/2 hover:cursor-pointer"
       >
-        <FaAngleRight />
+        <FaAngleRight className={`${theme==='dark'?'text-black':'text-white'}`}/>
       </button>
 
        <div className={` rounded-xl p-4 sm:p-6 h-full ${theme === 'dark'?'bg-gradient-to-r from-[#0f0f13] to-[#292a38]':'bg-white'}`}>

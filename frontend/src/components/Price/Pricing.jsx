@@ -1,6 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import universe from "../../assets/universe.svg";
 import { motion } from "framer-motion";
 import BackgroundImg from "../BackgroundImg";
@@ -39,12 +37,7 @@ const Pricing = () => {
     getPrice();
   }, []);
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
+ 
 
   const orderedData = [];
   const enterprise = pricingData.find(
@@ -64,8 +57,6 @@ const Pricing = () => {
   return (
     <div
       className={`w-full flex flex-col items-center justify-center bg-transparent overflow-visible relative z-30 pt-60 pb-20 ${theme === 'dark'? 'bg-black' :'bg-white'}`}
-      data-aos="fade-up"
-      data-aos-delay="200"
     >
       {/* Background img */}
       {theme==='dark'?<BackgroundImg/>:""}
