@@ -12,7 +12,7 @@ const Banner = () => {
   const {theme}=useContext(themeContext);
 
   return (
-    <div className={`relative w-full pt-36 md:pt-36 lg:pt-36 flex items-center justify-center  overflow-visible ${theme === 'dark'? 'bg-black' : 'bg-[#FFFDF6]'}`}>
+    <div className={`relative w-full pt-36 md:pt-36 lg:pt-36 flex items-center justify-center  overflow-visible ${theme === 'dark'? 'bg-black' : 'bg-white'}`}>
       {/* Background img */}
       {theme ==='dark'? <BackgroundImg />:""}
       

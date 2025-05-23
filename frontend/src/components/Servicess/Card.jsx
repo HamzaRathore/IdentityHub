@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import img1 from "../../assets/servicess/img1.svg";
 import img2 from "../../assets/servicess/img2.svg";
 import img3 from "../../assets/servicess/img3.svg";
@@ -6,7 +6,10 @@ import gradient from "../../assets/servicess/service-gradient.png";
 import arrow from "../../assets/servicess/arrow-right.svg";
 import card from "../../assets/Card.svg";
 import { fetchService } from "../../apis/service";
+import { themeContext } from "../../context/context";
 const Card = () => {
+
+  const {theme} = useContext(themeContext);
     
   const images = [img1, img2, img3];
   const [service, setService] = useState(null);
@@ -44,7 +47,7 @@ const Card = () => {
                 <h3 className="inter text-2xl pt-4 text-[#D6DDF8] z-10">
                   {item.heading}
                 </h3>
-                <p className="inter text-sm pt-2 text-[#CAC6DD] z-10">
+                <p className={`inter text-sm pt-2  z-10 ${theme==='dark'?'text-[#CAC6DD]':'text-gray-300'}`}>
                   {item.description}
                 </p>
                 <button className="inter w-36 h-11 text-left text-lg flex items-center gap-2 py-2 rounded-md transition-all duration-300 hover:bg-gradient-to-r from-[#090EDB] to-[#8D1EA2] hover:text-white hover:cursor-pointer z-10">

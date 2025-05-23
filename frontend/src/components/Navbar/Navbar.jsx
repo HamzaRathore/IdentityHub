@@ -54,7 +54,7 @@ const Navbar = () => {
         {/* Desktop Button */}
         <div className="hidden sm:flex items-center" >
           {theme === "dark" ? (
-            <MdOutlineLightMode onClick={toggle} className="h-8 w-8 mr-4 hover:cursor-pointer hover:scale-105 transition-all duration-150" />
+            <MdOutlineLightMode onClick={toggle} className="h-8 w-8 mr-4 hover:cursor-pointer hover:scale-105 transition-all duration-150 text-white" />
           ) : (
             <MdOutlineDarkMode onClick={toggle} className="h-8 w-8 mr-4 hover:cursor-pointer text-black hover:scale-105 transition-all duration-150" />
           )}

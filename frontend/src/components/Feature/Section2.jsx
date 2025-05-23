@@ -1,8 +1,12 @@
 import { detail, grid } from "../../constants";
 import drop2 from "../../assets/features/drop2.svg";
+import { useContext } from "react";
+import { themeContext } from "../../context/context";
 
 const Section2 = () => {
+  const theme=useContext(themeContext)
   return (
+    
     <div className="w-full h-auto mt-6 p-4 sm:p-6 md:p-8 rounded-2xl relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#ffffff1a] to-[#ffffff0a] backdrop-blur-[16px] border border-white/10 rounded-2xl shadow-xl"></div>
       <div className="w-full max-w-full mt-6 sm:mt-10 flex flex-col sm:flex-row justify-between relative z-10">

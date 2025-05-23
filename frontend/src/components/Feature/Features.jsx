@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import BackgroundImg from "../BackgroundImg";
@@ -6,8 +6,11 @@ import Section1 from "./Section1";
 import Section2 from "./Section2";
 import Section3 from "./Section3";
 import GradientLabel from "../GradientLabel";
+import { themeContext } from "../../context/context";
 
 const Features = () => {
+
+  const {theme} = useContext(themeContext)
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -17,7 +20,7 @@ const Features = () => {
 
   return (
     <div
-      className="w-full pt-20 sm:pt-10 lg:pt-0 flex flex-col items-center justify-center bg-transparent overflow-visible relative z-30 lg:mt-60 md:mt-40 sm:mt-20"
+      className={`w-full pt-20 flex flex-col items-center justify-center bg-transparent overflow-visible relative z-30 lg:pt-60 md:pt-40 sm:pt-20 ${theme==='dark'?'bg-black':'bg-white'}`}
       data-aos="fade-up"
       data-aos-delay="200"
     >
@@ -31,7 +34,7 @@ const Features = () => {
            {/* Gradient label */}
            <GradientLabel text ="Features"/>
 
-          <div className="heading mt-2 text-[#CAD1E9] w-full text-2xl sm:text-3xl md:text-4xl">
+          <div className={`heading mt-2 w-full text-2xl sm:text-3xl md:text-4xl  ${theme ==='dark'?'text-[#CAD1E9]':'text-gray-700'}`}>
             <h2>
               Why{" "}
               <span className="bg-gradient-to-r from-[#090EDB] to-[#8D1EA2] bg-clip-text text-transparent">
@@ -50,9 +53,9 @@ const Features = () => {
 
         {/* Feature main containerr  */}
         
-        <Section1 />
-        <Section2 />
-        <Section3 />
+        <Section1/>
+        <Section2/>
+        <Section3/>
 
       </div>
     </div>

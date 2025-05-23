@@ -3,8 +3,11 @@ import email from "../../assets/banner/mail.svg";
 import user from "../../assets/banner/user.svg";
 import drop3 from "../../assets/features/drop3.svg";
 import img3 from "../../assets/features/img3.svg";
+import { useContext } from "react";
+import { themeContext } from "../../context/context";
 
 const Section3 = () => {
+  const theme=useContext(themeContext)
   return (
     <div className="w-full h-auto mt-6 p-4 sm:p-6 md:p-8 rounded-2xl relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#ffffff1a] to-[#ffffff0a] backdrop-blur-[16px] border border-white/10 rounded-2xl shadow-xl"></div>
