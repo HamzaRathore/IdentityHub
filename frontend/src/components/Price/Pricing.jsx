@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import universe from "../../assets/universe.svg";
@@ -7,8 +7,11 @@ import BackgroundImg from "../BackgroundImg";
 import PriceCard from "./PriceCard";
 import { fetchPrice } from "../../apis/price";
 import GradientLabel from "../GradientLabel";
+import { themeContext } from "../../context/context";
 
 const Pricing = () => {
+
+  const {theme}=useContext(themeContext)
 
   const floatAnim = {
   initial: { y: 0 },
@@ -60,14 +63,15 @@ const Pricing = () => {
 
   return (
     <div
-      className="w-full flex flex-col items-center justify-center bg-transparent overflow-visible relative z-30 pt-60 mb-20"
+      className={`w-full flex flex-col items-center justify-center bg-transparent overflow-visible relative z-30 pt-60 pb-20 ${theme === 'dark'? 'bg-black' :'bg-white'}`}
       data-aos="fade-up"
       data-aos-delay="200"
     >
       {/* Background img */}
-      <BackgroundImg/>
+      {theme==='dark'?<BackgroundImg/>:""}
       
-      <div className="absolute inset-0 z-0 backdrop-blur-2xl bg-black/10" />
+      
+      <div className="absolute inset-0 z-0 backdrop-blur-2xl " />
 
       {/* header */}
       <div className="relative z-20 w-full max-w-[88.5%] mx-auto text-center">
@@ -79,7 +83,7 @@ const Pricing = () => {
           {/* Gradient label */}
            <GradientLabel text ="Pricing"/>
 
-          <div className="heading mt-2 text-[#CAD1E9] w-96 text-4xl">
+          <div className={`heading mt-2 w-96 text-4xl ${theme ==='dark'?'text-[#CAD1E9]':'text-gray-700'}`}>
             <h2>
               Our{" "}
               <span className="bg-gradient-to-r from-[#090EDB] to-[#8D1EA2] bg-clip-text text-transparent">

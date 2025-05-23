@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { fetchReview } from "../../apis/review";
 import ReviewCard from "./ReviewCard";
 import GradientLabel from "../GradientLabel";
+import { themeContext } from "../../context/context";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
+  const {theme} = useContext(themeContext)
 
   useEffect(() => {
     const getReviews = async () => {
@@ -60,7 +62,7 @@ const Reviews = () => {
 
   return (
     <div
-      className="w-full flex flex-col items-center justify-center bg-transparent overflow-visible relative z-30 mt-20 md:mt-60 pb-20"
+      className={`w-full flex flex-col items-center justify-center bg-transparent overflow-visible relative z-30 pt-20 md:pt-60 pb-20 ${theme==='dark'?'bg-black':'bg-white'}`}
       ata-aos="fade-up"
       data-aos-delay="200"
     >
@@ -71,7 +73,7 @@ const Reviews = () => {
           {/* Gradient label */}
            <GradientLabel text ="Testimonials"/>
 
-          <div className="heading mt-2 text-[#CAD1E9] w-full sm:w-97 text-2xl sm:text-4xl">
+          <div className={`heading mt-2  w-full sm:w-97 text-2xl sm:text-4xl ${theme === 'dark'?'text-[#CAD1E9]':'text-gray-700'}`}>
             <h2>
               What our user{" "}
               <span className="bg-gradient-to-r from-[#090EDB] to-[#8D1EA2] bg-clip-text text-transparent">

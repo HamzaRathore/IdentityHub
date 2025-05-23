@@ -43,7 +43,7 @@ const Features = () => {
               us
             </h2>
           </div>
-          <div className="subheading mt-4 w-full">
+          <div className={`subheading mt-4 w-full ${theme ==='dark'?'text-[#CAD1E9]':'text-gray-700'}`}>
             <p>
               We are the only service that provides all 3 services as a packaged
               service
