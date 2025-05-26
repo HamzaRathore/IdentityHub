@@ -1,0 +1,99 @@
+{
+  "nav": {
+    "services": "Servicios",
+    "features": "Funciones",
+    "pricing": "Precios",
+    "partners": "Socios",
+    "about": "Sobre Nosotros",
+    "startTrial": "Empieza Gratis"
+  },
+  "banner": {
+    "label": "Protege tus datos",
+    "headlinePart1": "Identity-hub es una mejor forma de",
+    "headlinePart2": "lograr",
+    "headlinePart3": "privacidad",
+    "description": "Haz que tus datos sean invisibles generando identidades ilimitadas. El siguiente nivel de protección de privacidad en línea y durante viajes.",
+    "startTrial": "Comienza la prueba ",
+    "useNow": "Úsalo ahora"
+  },
+  "services": {
+    "label": "Servicios",
+    "title": "Descubre nuestros servicios para proteger tu",
+    "highlight": "Información",
+    "description": "Haz que tus datos sean invisibles generando identidades ilimitadas. El siguiente nivel de protección de privacidad en línea y durante viajes."
+  },
+  "pricing": {
+    "label": "Precios",
+    "title1": "Nuestros ",
+    "title2": "Paquetes ",
+    "title3": "de Precios"
+  },
+
+  "reviews": {
+    "label": "Testimonios",
+    "title1": "Lo que nuestros usuarios",
+    "title2": "dicen",
+    "title3": "sobre nosotros",
+    "loading": "Cargando reseñas...",
+    "empty": "No hay reseñas disponibles."
+  },
+
+  "trial": {
+    "title1": "Sé parte del futuro de",
+    "title2": "IdentityHub",
+    "description": "Libera el poder de la IA dentro de Brainwave. Mejora tu productividad con Brainwave, la aplicación de chat de IA abierta.",
+    "button": "Comienza la prueba gratuita"
+  },
+
+  "footer": {
+    "features": "FUNCIONES",
+    "services": "SERVICIOS",
+    "pricing": "PRECIOS",
+    "howToUse": "CÓMO USAR",
+    "copyright": "© IdentityHub 2024. Todos los derechos reservados"
+  },
+
+  "features": {
+    "title": "Características",
+    "heading1": "Te ayudamos a",
+    "heading2": "proteger",
+    "heading3": "tu vida digital",
+    "description": "Tu solución integral para proteger datos, identidad y privacidad en línea.",
+    "section1": {
+      "heading": "Proteger información personal",
+      "points": [
+        "El primer paso consiste en identificar todos los lugares donde podría estar presente su información personal.",
+        "Una vez que haya identificado dónde se encuentra su información, el siguiente paso es contactar a los administradores de esta plataforma.",
+        "Eliminar la información personal no es una tarea única, sino que requiere vigilancia continua.",
+        "Existen servicios y herramientas profesionales disponibles que se especializan en la eliminación de información personal."
+      ]
+    },
+    "section2": {
+      "heading": "Informes detallados",
+      "items": [
+        { "title": "Nombre de usuario", "point": "+1 (456) 453-3456" },
+        { "title": "Números de teléfono", "point": "+1 (456) 453-3456" },
+        {
+          "title": "Dirección de correo electrónico",
+          "point": "+1 (456) 453-3456"
+        },
+        { "title": "Tarjeta de crédito", "point": "+1 (456) 453-3456" },
+        { "title": "Contraseña", "point": "Kas3345-r32" },
+        { "title": "Código de acceso único", "point": "Kas3345-r32" }
+      ]
+    },
+    "section3": {
+      "heading": "Asegurar todos los datos",
+      "emailLabel": "Dirección de correo electrónico",
+      "usernameLabel": "Nombre de usuario"
+    }
+  },
+
+  "why_choose_us": "Por qué elegirnos",
+  "why_choose_us_sub": "Somos el único servicio que proporciona los 3 servicios como un paquete",
+  "protect_info": "Proteger información personal",
+  "detailed_reporting": "Informes detallados",
+  "secure_data": "Asegurar todos los datos",
+  "email_address": "Dirección de correo electrónico",
+  "user_name": "Nombre de usuario"
+}

@@ -1,12 +1,14 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import bar from "../../assets/bar.svg";
 import pattern from "../../assets/pattern.png";
 import BackgroundImg from "../BackgroundImg";
 import { themeContext } from "../../context/context";
+import { useTranslation } from "react-i18next";
 
 const Trial = () => {
   const { theme } = useContext(themeContext);
+  const { t } = useTranslation();
 
   return (
     <div
@@ -17,7 +19,7 @@ const Trial = () => {
       {/* background gradient img */}
       <BackgroundImg />
 
-      {/*  circle img with rotation */}
+      {/* circle img with rotation */}
       <div className="absolute inset-0 w-full h-full flex items-center justify-center z-0">
         <motion.img
           src={pattern}
@@ -40,7 +42,7 @@ const Trial = () => {
               theme === "dark" ? "text-white" : "text-black"
             }`}
           >
-            Be part of the future of
+            {t("trial.title1")}
           </h1>
           <div className="relative inline-block">
             <h1
@@ -48,7 +50,7 @@ const Trial = () => {
                 theme === "dark" ? "text-white" : "text-black"
               }`}
             >
-              IdentityHub
+              {t("trial.title2")}
             </h1>
             <img
               src={bar}
@@ -62,13 +64,12 @@ const Trial = () => {
               theme === "dark" ? "text-[#CAC6DD]" : "text-gray-700"
             }`}
           >
-            Unleash the power of AI within Brainwave. Upgrade your productivity
-            with Brainwave, the open AI chat app.
+            {t("trial.description")}
           </p>
 
           {/* Button */}
           <button className="inter mt-8 px-6 py-3 text-white rounded-xl text-sm transition-colors duration-300 bg-gradient-to-r from-[#0d10db] to-[#DA24BB] hover:scale-105 hover:transition-all hover:duration-200 cursor-pointer">
-            Start free trial
+            {t("trial.button")}
           </button>
         </div>
       </div>

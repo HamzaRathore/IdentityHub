@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
 import { navs } from "../../constants";
 import { themeContext } from "../../context/context";
-import { MdOutlineLightMode, MdOutlineDarkMode } from "react-icons/md";
+import { useTranslation } from "react-i18next";
 
-const NavbarMobile = ({ isMenuOpen, setIsMenuOpen,toggle }) => {
+const NavbarMobile = ({ isMenuOpen, setIsMenuOpen, toggle }) => {
+  const { theme } = useContext(themeContext);
+  const { t } = useTranslation();
 
-  const {theme}=useContext(themeContext)
   if (!isMenuOpen) return null;
 
   return (
@@ -14,21 +15,20 @@ const NavbarMobile = ({ isMenuOpen, setIsMenuOpen,toggle }) => {
         {navs.map((item) => (
           <a
             key={item.id}
-            href="/"
+            href={item.href}
             className="text-[#D9D9D9] hover:text-white transition-colors text-sm py-2 border-b border-white/10 last:border-0"
             onClick={() => setIsMenuOpen(false)}
           >
-            {item.name}
+            {t(item.name)}
           </a>
         ))}
-        
+
         <button className="w-full mt-2 relative group overflow-hidden rounded-lg bg-gradient-to-r from-[#090EDB] to-[#8D1EA2] p-[1px]">
           <span className="relative block bg-gray-900 w-full py-2 rounded-[calc(0.5rem-1px)] text-[#D9D9D9] text-sm transition-all duration-300 group-hover:bg-opacity-50">
-            Start Free Trial
+            {t("nav.startTrial")}
           </span>
         </button>
       </div>
-      
     </div>
   );
 };

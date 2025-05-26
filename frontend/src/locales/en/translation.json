@@ -1,0 +1,108 @@
+{
+  "nav": {
+    "services": "Services",
+    "features": "Features",
+    "pricing": "Pricing",
+    "partners": "Partners",
+    "about": "About Us",
+    "startTrial": "Start Free Trial"
+  },
+  "banner": {
+    "label": "Secure your data",
+    "headlinePart1": "Identity-hub is a better way to",
+    "headlinePart2": "achieve",
+    "headlinePart3": "privacy",
+    "description": "Make your data invisible by generating unlimited identities. The next-level in privacy protection for online and travel.",
+    "startTrial": "Start Free Trial",
+    "useNow": "Use it Now"
+  },
+  "services": {
+    "label": "Services",
+    "title": "See our services for secure your",
+    "highlight": "Data",
+    "description": "Make your data invisible by generating unlimited identities. The next-level in privacy protection for online and travel."
+  },
+      "pricing": {
+      "label": "Pricing",
+      "title1": "Our ",
+      "title2": "Pricing",
+      "title3": "Package"
+    },
+
+    "reviews": {
+      "label": "Testimonials",
+      "title1": "What our user",
+      "title2": "says",
+      "title3": "about us",
+      "loading": "Loading reviews...",
+      "empty": "No reviews available."
+    },
+    
+  "trial": {
+    "title1": "Be part of the future of",
+    "title2": "IdentityHub",
+    "description": "Unleash the power of AI within Brainwave. Upgrade your productivity with Brainwave, the open AI chat app.",
+    "button": "Start free trial"
+  },
+   "footer": {
+    "features": "FEATURES",
+    "services": "SERVICES",
+    "pricing": "PRICING",
+    "howToUse": "HOW TO USE",
+    "copyright": "© IdentityHub 2024. All rights reserved"
+  },
+  
+  "features": {
+    "title": "Features",
+    "heading1": "We help you",
+    "heading2": "protect",
+    "heading3": "your digital life",
+    "description": "Your all-in-one solution for protecting online data, identity, and privacy.",
+    "section1": {
+      "heading": "Protect Personal Information",
+      "points": [
+        "The first step involves identifying all places where your personal information might be present.",
+        "Once you've identified where your information is held, the next step is to contact the administrators of this platform.",
+        "Removing personal information is not a one-time task but requires ongoing vigilance.",
+        "There are professional services and tools available that specialise in personal information removal."
+      ]
+    },
+
+
+    "section2": {
+      "heading": "Detailed Reports",
+      "points": [
+        "The first step involves identifying all places where your personal information might be present.",
+        "Once you've identified where your information is held, the next step is to contact the administrators of this platform.",
+        "Removing personal information is not a one-time task but requires ongoing vigilance.",
+        "There are professional services and tools available that specialise in personal information removal."
+      ],
+      "items": [
+        { "title": "Username", "point": "+1 (456) 453-3456" },
+        { "title": "Phone numbers", "point": "+1 (456) 453-3456" },
+        { "title": "Email address", "point": "+1 (456) 453-3456" },
+        { "title": "Credit card", "point": "+1 (456) 453-3456" },
+        { "title": "Password", "point": "Kas3345-r32" },
+        { "title": "One-time passcode", "point": "Kas3345-r32" }
+      ]
+    },
+    "section3": {
+      "heading": "Secure All Data",
+      "emailLabel": "Email Address",
+      "usernameLabel": "Username",
+      "points": [
+        "The first step involves identifying all places where your personal information might be present.",
+        "Once you've identified where your information is held, the next step is to contact the administrators of this platform.",
+        "Removing personal information is not a one-time task but requires ongoing vigilance.",
+        "There are professional services and tools available that specialise in personal information removal."
+      ]
+    }
+  },
+  "why_choose_us": "Why Choose Us",
+  "why_choose_us_sub": "We are the only service that offers all 3 solutions in one package",
+  "protect_info": "Protect Personal Information",
+  "detailed_reporting": "Detailed Reporting",
+  "secure_data": "Secure All Data",
+  "email_address": "Email Address",
+  "user_name": "Username"
+}

@@ -5,9 +5,14 @@ import drop3 from "../../assets/features/drop3.svg";
 import img3 from "../../assets/features/img3.svg";
 import { useContext } from "react";
 import { themeContext } from "../../context/context";
+import { useTranslation } from "react-i18next";
 
 const Section3 = () => {
   const { theme } = useContext(themeContext);
+  const { t } = useTranslation();
+    const points = t("features.section3.points", { returnObjects: true });
+
+
 
   return (
     <div className="w-full h-auto mt-6 p-4 sm:p-6 md:p-8 rounded-2xl relative overflow-hidden">
@@ -31,7 +36,7 @@ const Section3 = () => {
                   theme === "dark" ? "text-[#CAD1E9]" : "text-gray-700"
                 }`}
               >
-                Secure All Data
+                {t("features.section3.heading")}
               </h2>
             </div>
             {security.map((secure) => (
@@ -48,7 +53,7 @@ const Section3 = () => {
                     theme === "dark" ? "text-[#CAD1E9]" : "text-gray-700"
                   }`}
                 >
-                  {secure.point}
+                  {points[secure.id - 1]}
                 </p>
               </div>
             ))}
@@ -59,7 +64,7 @@ const Section3 = () => {
         <div className="flex relative justify-center mt-10 sm:mt-0 sm:mr-4 md:mr-10">
           <img src={img3} alt="img1" className="max-w-full h-auto" />
 
-          {/* Email Box */}
+          {/* Email box */}
           <div
             className={`absolute top-0 right-0 sm:top-32 sm:-left-16 md:top-32 md:-left-28 w-36 sm:w-44 rounded-lg p-2 sm:p-3 text-left backdrop-blur-md ${
               theme === "dark"
@@ -79,7 +84,7 @@ const Section3 = () => {
                     theme === "dark" ? "text-[#CAC6DD]" : "text-gray-700"
                   }`}
                 >
-                  Email address
+                  {t("features.section3.emailLabel")}
                 </p>
                 <p
                   className={`text-xs ${
@@ -92,7 +97,7 @@ const Section3 = () => {
             </div>
           </div>
 
-          {/* Username Box */}
+          {/* Username box */}
           <div
             className={`absolute bottom-0 left-0 sm:top-64 sm:left-4 md:top-[77%] md:left-0 w-36 sm:w-44 rounded-lg p-2 sm:p-3 text-left backdrop-blur-md h-15 ${
               theme === "dark"
@@ -112,7 +117,7 @@ const Section3 = () => {
                     theme === "dark" ? "text-[#CAC6DD]" : "text-gray-700"
                   }`}
                 >
-                  User name
+                  {t("features.section3.usernameLabel")}
                 </p>
                 <p
                   className={`text-xs ${

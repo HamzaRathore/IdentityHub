@@ -1,10 +1,15 @@
-import { detail, grid } from "../../constants";
+import { detail } from "../../constants"; 
 import drop2 from "../../assets/features/drop2.svg";
 import { useContext } from "react";
 import { themeContext } from "../../context/context";
+import { useTranslation } from "react-i18next";
+import { useGrid } from "../../constants";
 
 const Section2 = () => {
   const { theme } = useContext(themeContext);
+  const { t } = useTranslation();
+  const points = t("features.section2.points", { returnObjects: true });
+  const grid = useGrid(); 
 
   return (
     <div className="w-full h-auto mt-6 p-4 sm:p-6 md:p-8 rounded-2xl relative overflow-hidden">
@@ -28,7 +33,7 @@ const Section2 = () => {
                   theme === "dark" ? "text-[#CAD1E9]" : "text-gray-700"
                 }`}
               >
-                Detailed Reporting
+                {t("features.section2.heading")}
               </h2>
             </div>
             {detail.map((details) => (
@@ -45,7 +50,7 @@ const Section2 = () => {
                     theme === "dark" ? "text-[#CAD1E9]" : "text-gray-700"
                   }`}
                 >
-                  {details.point}
+                  {points[details.id - 1]}
                 </p>
               </div>
             ))}

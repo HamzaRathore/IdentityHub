@@ -3,9 +3,12 @@ import drop1 from "../../assets/features/drop1.svg";
 import img1 from "../../assets/features/img1.svg";
 import { useContext } from "react";
 import { themeContext } from "../../context/context";
+import { useTranslation } from "react-i18next";
 
 const Section1 = () => {
   const { theme } = useContext(themeContext);
+  const { t } = useTranslation();
+  const points = t("features.section1.points", { returnObjects: true });
 
   return (
     <div className="w-full h-auto mt-6 p-4 sm:p-6 md:p-8 rounded-2xl relative overflow-hidden">
@@ -15,8 +18,7 @@ const Section1 = () => {
             ? "bg-gradient-to-br from-[#ffffff1a] to-[#ffffff0a] border border-white/10 shadow-xl"
             : "bg-white border border-gray-300 shadow-xl"
         }`}
-      >
-    </div>
+      ></div>
       <div className="w-full max-w-full flex flex-col sm:flex-row justify-between relative z-10">
         {/* left section */}
         <div className="flex w-full sm:w-[60%] md:w-[60%]">
@@ -28,7 +30,7 @@ const Section1 = () => {
                   theme === "dark" ? "text-[#CAD1E9]" : "text-gray-700"
                 }`}
               >
-                Protect Personal information
+                {t("features.section1.heading")}
               </h2>
             </div>
             {personalInfo.map((info) => (
@@ -45,7 +47,7 @@ const Section1 = () => {
                     theme === "dark" ? "text-[#CAD1E9]" : "text-gray-700"
                   }`}
                 >
-                  {info.point}
+                  {points[info.id - 1]}
                 </p>
               </div>
             ))}

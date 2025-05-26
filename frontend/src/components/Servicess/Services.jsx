@@ -2,9 +2,11 @@ import { useContext, useEffect, useState } from "react";
 import Card from "./Card";
 import GradientLabel from "../GradientLabel";
 import { themeContext } from "../../context/context";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
   const { theme } = useContext(themeContext);
+  const { t } = useTranslation();
 
   return (
     <div
@@ -15,7 +17,7 @@ const Services = () => {
       {/* Content container */}
       <div className="relative w-[40%] z-20 max-w-5xl mx-auto px-4 text-center flex flex-col justify-center items-center md:pt-40 ">
         {/* Gradient label */}
-        <GradientLabel text="Services" />
+        <GradientLabel text={t("services.label")} />
 
         <div
           className={`heading mt-2 w-97 text-4xl ${
@@ -23,17 +25,14 @@ const Services = () => {
           }`}
         >
           <h2>
-            See our services for secure your{" "}
+            {t("services.title")}{" "}
             <span className="bg-gradient-to-r from-[#090EDB] to-[#8D1EA2] bg-clip-text text-transparent">
-              Data
+              {t("services.highlight")}
             </span>
           </h2>
         </div>
-        <div className="subheading mt-4 w-72 md:w-[85%] lg:w-[90%] ">
-          <p>
-            Make your data invisible by generating unlimited identities. The
-            next-level in privacy protection for online and travel.
-          </p>
+        <div className="subheading mt-2 w-72 md:w-[85%] lg:w-[90%] ">
+          <p>{t("services.description")}</p>
         </div>
       </div>
 

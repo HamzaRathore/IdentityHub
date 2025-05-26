@@ -3,12 +3,14 @@ import { fetchReview } from "../../apis/review";
 import ReviewCard from "./ReviewCard";
 import GradientLabel from "../GradientLabel";
 import { themeContext } from "../../context/context";
+import { useTranslation } from "react-i18next";
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loading, setLoading] = useState(true);
   const { theme } = useContext(themeContext);
+  const {t}=useTranslation();
 
   useEffect(() => {
     const getReviews = async () => {
@@ -39,13 +41,13 @@ const Reviews = () => {
 
   if (loading) {
     return (
-      <div className="text-white text-center mt-20">Loading reviews...</div>
+      <div className="text-white text-center mt-20">{t("reviews.loading")}</div>
     );
   }
 
   if (!reviews.length) {
     return (
-      <div className="text-white text-center mt-20">No reviews available.</div>
+      <div className="text-white text-center mt-20">{t("reviews.empty")}</div>
     );
   }
 
@@ -61,7 +63,7 @@ const Reviews = () => {
         {/* header */}
         <div className="relative w-full sm:w-[33%] max-w-3xl mx-auto px-2 sm:px-4 text-center flex flex-col justify-center items-center">
           {/* Gradient label */}
-          <GradientLabel text="Testimonials" />
+          <GradientLabel text={t("reviews.label")} />
 
           <div
             className={`heading mt-2  w-full sm:w-97 text-2xl sm:text-4xl ${
@@ -69,11 +71,11 @@ const Reviews = () => {
             }`}
           >
             <h2>
-              What our user{" "}
+              {t("reviews.title1")}{" "}
               <span className="bg-gradient-to-r from-[#090EDB] to-[#8D1EA2] bg-clip-text text-transparent">
-                says
+                {t("reviews.title2")}
               </span>{" "}
-              about us
+              {t("reviews.title3")}
             </h2>
           </div>
         </div>
